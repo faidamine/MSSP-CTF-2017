@@ -1,4 +1,4 @@
-i found this strange file , i was thinkng about the commun used encrytion to encrypt file , so i think about aes
+i found this strange file , i was thinkng about the commun used encrytion  , so i think about aes
 so i used online service and i found it .
 
 
