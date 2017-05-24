@@ -1,4 +1,9 @@
-we found this first value : 1401997269
-and we substract the real value from the first it give us this :788545521522362325
+we need to read the random generate number from the rax register 
+
+0x000000000040069b <+46>:    movabs rax,0xaf179f95390c7d5
+
+# int(0xaf179f95390c7d5) : 788545521522362325
+
+ and this is the flag
 
 flag is :msspctf{788545521522362325}
