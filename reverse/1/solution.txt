@@ -1,3 +1,3 @@
-we need to read each time the random value from the eax register and submit it to complete the 10 stages and i found the flag
+we need to read each time the random value from the eax register and submit it to complete the 10 stages and you will get the flag
 
 mssp{S0o_R3adO_POrr}
