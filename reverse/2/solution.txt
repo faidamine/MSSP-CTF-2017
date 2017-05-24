@@ -1,4 +1,4 @@
-we need to read the random generate number from the rax register 
+we need to read the random generated number from the rax register 
 
 0x000000000040069b <+46>:    movabs rax,0xaf179f95390c7d5
 
