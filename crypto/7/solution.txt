@@ -1,0 +1,9 @@
+i use openssl to extract the modulus , After that I factorize the N
+
+once we found the p and q we need to generate the private key using rsatool
+
+after generating the private key open opessl tool and decode rsa using the private key !! and 
+we found the flag
+
+
+msspctf{w3_l0v3_rS4_1ts_W0nd3rfUl}

@@ -1,0 +1,3 @@
+i Decode the morce code and i found the flag
+
+msspctf{M0rC3_S4mu3l}

@@ -1,0 +1,7 @@
+#cat b64.flag | base64 -d > C
+#openssl aes-256-cbc -d -a -in C -out plain
+#input your k = keyA = keyB
+#cat plain
+
+
+msspctf{Diff3_H3llM4n_1s_V3ry_S3cur3}

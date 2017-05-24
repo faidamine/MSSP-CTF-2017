@@ -1,0 +1,18 @@
+$ objdump -d sep_15/d-ctf/r100.bin | grep \<ptrace@plt\>
+0000000000400600 <ptrace@plt>:
+  4007da:	e8 21 fe ff ff       	callq  400600 <ptrace@plt>
+gdb-peda$ b *0x4007df
+Breakpoint 1 at 0x4007df
+gdb-peda$ r
+.
+.
+gdb-peda$ set $rax=0
+
+Our password should be 1 less than each of chars.
+
+we found 
+
+and we execute : $ python -c "print (''.join(chr(ord(i)-1) for i in 'Dpef\`Ubmlfst'))"
+
+
+msspctf{Code_Talkers}

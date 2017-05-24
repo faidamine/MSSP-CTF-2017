@@ -1,0 +1,31 @@
+I use bruteforce tool and I Found a hidden directory and i found database inside
+
+INSERT INTO `users` (`id`, `username`, `password_bcrypt`, `fname`, `description`) VALUES (1, 'jaffa', '$2y$10$FalJ8SmqTDBv7Fr366RC9uW5hKJVZijsDqzgASh1kSGMsUFMMLGZq', 'hackim', 'Hash cracking is futile!');
+
+Username: jaffa
+Password: [a-z\d]*kztu6fe1m68mwf7vl1g3grjzmocia043pmno83q3ati98c8r324dzc0hc7n41p6tdjg6p[a-z\d]*
+Bcrypt used
+
+Script in python to find password
+
+
+import bcrypt, string, itertools
+
+chars = string.lowercase + string.digits
+partialPass = 'kztu6fe1m68mwf7vl1g3grjzmocia043pmno83q3ati98c8r324dzc0hc7n41p6tdjg6p'
+bcryptHash = '$2y$10$FalJ8SmqTDBv7Fr366RC9uW5hKJVZijsDqzgASh1kSGMsUFMMLGZq'
+
+def Suff(permutationLen):
+    charsPerm = [''.join(x) for x in itertools.permutations(chars, permutationLen)][::-1]
+    
+    total = len(charsPerm)
+    for i in range(0, total):
+        print '\r%d/%d' % (i, total - 1),
+        
+        password = partialPass + charsPerm[i]
+        if (bcrypt.checkpw(password, bcryptHash)):
+            print '\nPassword found: %s' % password
+            return
+
+Suff(3)
+

@@ -1,0 +1,14 @@
+I want it to open the zip file but it was protected by password
+
+so i bruteforce and i found the pass : msspctf
+
+after that i unzip it.
+
+second thing i did i used exiftool and foremost to extract the image data and i found second image
+
+once i didn't find any thing in this second image i was thinking about steganography
+
+so i bruteforce steghide using stegidebruteforce and I found a hidden file and finaly I get the flag
+
+
+msspctf{H1dd1ng_1s_4lw4y5_4_b4d_1d34}

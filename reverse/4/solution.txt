@@ -1,0 +1,9 @@
+gdb-peda$  disas main
+gdb-peda$ b*0x000000000040089e
+gdb-peda$ r
+gdb-peda$ x/xi $rbp-0x50
+   0x7fffcd877120:      rex.WB pop r15
+gdb-peda$ x/xs $rbp-0x50
+0x7fffcd877120: "I_bl3iv3_I_C4n_Fly"
+gdb-peda$ 
+flag is msspctf{I_bl3iv3_I_C4n_Fly}

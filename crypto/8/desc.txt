@@ -1,0 +1,23 @@
+Alice and Bob agree to use a modulus
+p=24815323469403931728221172233738523533528335161133543380459461440894543366372904768334987264000000000000000000479
+
+and base
+g=117223373852353
+
+Alice chooses a secret integer a then sends Bob A = g^a mod p
+(A): 21175029770059863276907274297699121170132107368280471634022003224085361277552251434213227263797773701239428311986
+
+Bob chooses a secret integer b then sends Alice B = g^b mod p
+(B): 4773572322163852714232246738719840375829165256333070274922697249761422546324433622714052672955489650699296045098
+
+Alice computes k = B^a mod p
+Bob computes k = A^b mod p
+
+Alice and Bob now share a key k
+Alice encrypts a message M with key sha256(k) and sends C to Bob.
+
+C = AES(M,k)
+
+Can you decrypt C please ?
+
+Base64(C) is in b64.ciphertext

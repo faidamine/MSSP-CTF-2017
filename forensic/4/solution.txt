@@ -1,0 +1,11 @@
+once i have the image i tried different tool such exiftool 
+i found a fake flag msspctf{l0l0l0l0l0l0l}
+and i found a user comment :
+User Comment                    : raw : 65Ctasse
+
+
+in this case this is pastbin link : http://pastebin.com/raw/65Ctasse
+
+and this is the write flag 
+
+sspctf{Foll0w_m3_4nd_I_wi11_g1v3_y0u_th3_fl4g}

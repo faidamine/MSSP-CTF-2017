@@ -1,0 +1,5 @@
+after decompiling the PE we found that he is sending the flag to 127.0.0.1 in the port 31337
+
+using nc -vlp 31337 & execute the program we found the flag
+
+msspctf{39edb5b50b4360427eb643430b0909}

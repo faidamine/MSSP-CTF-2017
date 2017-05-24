@@ -1,0 +1,32 @@
+if (((var_0 & 0xff) == 0x77) && ((var_9 & 0xff) == 0x6b)) goto loc_4006d4;
+    goto loc_400782;
+
+loc_4006d4:
+    if (((var_8 & 0xff) == 0x6f) && ((var_6 & 0xff) == 0x68)) goto loc_4006ec;
+    goto loc_400782;
+
+loc_4006ec:
+    if (((var_5 & 0xff) == 0x37) && ((var_7 & 0xff) == 0x6d)) goto loc_400704;
+    goto loc_400782;
+
+loc_400704:
+    if (((var_1 & 0xff) == 0x65) && ((var_3 & 0xff) == 0x65)) goto loc_400719;
+    goto loc_400782;
+
+loc_400719:
+    if (((var_2 & 0xff) == 0x68) && ((var_4 & 0xff) == 0x69)) goto loc_40072e;
+    goto loc_400782;
+
+loc_40072e:
+    if (((var_13 & 0xff) == 0x67) && ((var_11 & 0xff) == 0x4c)) goto loc_400743;
+    goto loc_400782;
+
+loc_400743:
+    if (((var_12 & 0xff) == 0x65) && (((var_14 & 0xff) == 0x30) && ((var_10 & 0xff) == 0x69))) goto loc_400760;
+    goto loc_400781;
+
+
+
+once we decode the hex value to ascii in the order var_x
+
+we found the flag : msspctf{wehei7hmokiLeg0}

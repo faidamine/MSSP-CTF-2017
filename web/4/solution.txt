@@ -1,0 +1,17 @@
+here in this challenge we have three stages
+
+the first one it check if the input is integer and the length more than 3 and the value is smaller than 2234
+
+the number is : 1e4 ( you can execute this in python float(1e4) > 2234 ) 
+
+the second and the third stages is easy you can bypass the filters with array []
+
+the final url  is : 
+
+http://web.msspctf.info/web4/?pass1=1e4&pass2[]=&pass3[]=
+
+Finaly we get the flag in base64
+
+i decode it but unfortunately the flag was again ecrypted using xor between the flag and a hmac hash.
+
+I create a script to decode the flag : web4.py 

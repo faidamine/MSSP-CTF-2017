@@ -1,0 +1,8 @@
+a = 9
+b = 18
+
+welcome to msspCTF
+
+wyyxkhl{u00t_h0_y33_a0q}
+
+FLAG : msspctf{g00d_t0_s33_y0u}
