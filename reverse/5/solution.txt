@@ -27,6 +27,6 @@ loc_400743:
 
 
 
-once we decode the hex value to ascii in the order var_x
+once we decode the hex value to ascii in the order of var_x
 
-we found the flag : msspctf{wehei7hmokiLeg0}
+you will found the flag : msspctf{wehei7hmokiLeg0}
