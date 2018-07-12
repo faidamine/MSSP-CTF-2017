@@ -1,10 +1,10 @@
 I open the url  and I check the source code nothing found
 
-so i check for a backup file i found index.php~
+I check for a backup file i found index.php~
 
-so I read the source and i found that i can read the content of files from index.php
+This file allow us to read the content of files from index.php
 
-so
+COol !!
 
 http://web.msspctf.info/web5/index.php?useme=
 
@@ -35,7 +35,8 @@ but i was able to load only the admin.php source code
        echo "Congrats!! ".$FLAG;
   }
   else echo '<img src="troll.jpg" alt="">';
-?>
+?>
+
 
 
 Step 1 : 
